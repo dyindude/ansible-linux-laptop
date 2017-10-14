@@ -1,9 +1,8 @@
 - copy rc.lua to VAR USER
 - look into messing around with zsh as default shell in linux. it's bearable in Windows
 - roles to add (check galaxy?)
-  - steam (repo + packages) https://steamcdn-a.akamaihd.net/client/installer/steam.deb
-  - google-chrome (repo + packages)
-  - obs (repo + packages)
+  - #steam (repo + packages) (used galaxy package)
+  - #obs (repo + packages)
   - calibre
 - dotfiles repo
   - awesome
