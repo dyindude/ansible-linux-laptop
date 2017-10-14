@@ -2,6 +2,10 @@
 - look into messing around with zsh as default shell in linux. it's bearable in Windows
 - roles to add (check galaxy?)
   - #steam (repo + packages) (used galaxy package)
+    - but steam needs:
+      - libgl1-mesa-dri:i386
+      - libgl1-mesa-glx:i386
+      - libc6:i386
   - #obs (repo + packages)
   - calibre
 - dotfiles repo
@@ -11,6 +15,9 @@
   - todoist?
   - python - ~/.py
   - manage ~/.bin
+- QOL
+  - font management
+  - term background scripts
 
 - stuff to mess around with later:
   - when making changes to apt-repository definitions, the old ones seem to hang out and break stuff.

@@ -11,4 +11,4 @@
     - libcairo-gobject2
     - awesome
     - awesome-extra
-    - rxvt-unicode
+    - rxvt-unicode-256color

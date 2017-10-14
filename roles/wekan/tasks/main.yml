@@ -1,0 +1,28 @@
+---
+- name: set up data container for wekan
+  docker_container:
+    name: wekandata
+    image: busybox
+    state: present
+    volumes: /data
+
+- name: wekan mongodb container
+  docker_container:
+    name: wekandb
+    image: mongo:3.2.12
+    state: started
+    volumes_from:
+    - wekandata
+
+- name: wekan container
+  docker_container:
+    name: wekan
+    image: wekanteam/wekan:meteor-1.4
+    state: started
+    links:
+    - wekandb
+    ports:
+    - 8081:80
+    env:
+        MONGO_URL: mongodb://wekandb/wekan
+        ROOT_URL: http://wekan:8081
