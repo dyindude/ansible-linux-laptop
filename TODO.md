@@ -1,3 +1,6 @@
+- #role dependencies
+  - sorta done, not sure that I'm really getting a huge benefit - tho i do see the benefit in making docker
+    container tasks depend on the docker tasks
 - copy rc.lua to VAR USER
 - look into messing around with zsh as default shell in linux. it's bearable in Windows
 - roles to add (check galaxy?)
@@ -17,6 +20,8 @@
   - manage ~/.bin
 - QOL
   - font management
+    - #Terminus
+    - #Inconsolata\ for\ Powerline
   - term background scripts
 
 - stuff to mess around with later:
