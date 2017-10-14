@@ -10,3 +10,14 @@
     - xinit
     - xfonts-100dpi
     - xfonts-75dpi
+    - xfonts-terminus
+- name: Ensure .fonts folder exists
+  file:
+    path: "/home/{{ bootstrap_user.name }}/.fonts"
+    state: directory
+- name: Install Inconsolata font
+  copy:
+    src: "Inconsolata for Powerline.otf"
+    dest: "/home/{{ bootstrap_user.name }}/.fonts/Inconsolata for Powerline.otf"
+    owner: "{{ bootstrap_user.name }}"
+    group: "{{ bootstrap_user.name }}"
