@@ -1,2 +1,2 @@
-- copy rc.lu to VAR USER
+- copy rc.lua to VAR USER
 - look into messing around with zsh as default shell in linux. it's bearable in Windows
