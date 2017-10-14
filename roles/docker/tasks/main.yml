@@ -24,3 +24,6 @@
   apt:
     name: docker-ce
     update_cache: yes
+- name: Install docker-py
+  apt:
+    name: python-docker
