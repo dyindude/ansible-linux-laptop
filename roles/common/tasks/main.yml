@@ -1,4 +1,8 @@
 ---
+- name: dist-upgrade
+  apt:
+    update_cache: yes
+    upgrade: dist
 - name: Install virtualbox packages when running in Vagrant
   apt:
     name: "{{ item }}"
