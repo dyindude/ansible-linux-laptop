@@ -8,5 +8,7 @@
     name: "{{ item }}"
     update_cache: yes
   with_items:
+    - libcairo-gobject2
     - awesome
     - awesome-extra
+    - rxvt-unicode

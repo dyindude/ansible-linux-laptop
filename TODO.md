@@ -1,0 +1,1 @@
+- copy rc.lu to VAR USER
