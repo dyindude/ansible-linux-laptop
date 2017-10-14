@@ -1,11 +1,19 @@
 ---
-- name: Install xorg packages
+- name: Install virtualbox packages when running in Vagrant
   apt:
     name: "{{ item }}"
     update_cache: yes
+  when: ran_from_vagrant == "true"
   with_items:
-    - xserver-common
-    - x11-xserver-utils
-    - xinit
-    - xfonts-100dpi
-    - xfonts-75dpi
+    - virtualbox-guest-dkms
+    - virtualbox-guest-x11
+- name: Install drivers for T450s when not running in Vagrant
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  when: ran_from_vagrant != "true"
+  with_items:
+    - xserver-xorg-video-intel
+    - xserver-xorg-input-synaptics
+    - libdrm-intel1
+- name: Ensure my user exists #PERFECT EXCUSE TO USE ansible-vault
