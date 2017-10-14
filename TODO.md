@@ -1,3 +1,13 @@
+- bugs??
+  - variable precedence with vars/main.yml and the role
+  - want to be able to define all important vars in vars/
+- build the entire damn thing on
+  - gentoo
+  - centos
+  - fedora
+  - arch
+  - debian
+  - freebsd (steam may be a problem here)
 - #role dependencies
   - sorta done, not sure that I'm really getting a huge benefit - tho i do see the benefit in making docker
     container tasks depend on the docker tasks
@@ -5,13 +15,15 @@
 - look into messing around with zsh as default shell in linux. it's bearable in Windows
 - roles to add (check galaxy?)
   - #steam (repo + packages) (used galaxy package)
-    - but steam needs:
-      - libgl1-mesa-dri:i386
-      - libgl1-mesa-glx:i386
-      - libc6:i386
   - #obs (repo + packages)
   - calibre
+  - golang
+  - node
+  - docker chrome
+  - mplayer
+  - minidlna
 - dotfiles repo
+  - tmux
   - awesome
   - vim
   - .bash_profile/bashrc
@@ -19,9 +31,8 @@
   - python - ~/.py
   - manage ~/.bin
 - QOL
-  - font management
-    - #Terminus
-    - #Inconsolata\ for\ Powerline
+  - font-management
+    - fc-cache as my user?
   - term background scripts
 
 - stuff to mess around with later:
