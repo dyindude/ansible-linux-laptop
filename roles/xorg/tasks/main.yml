@@ -17,7 +17,7 @@
     state: directory
 - name: Install Inconsolata font
   copy:
-    src: "Inconsolata for Powerline.otf"
+    src: "files/fonts/Inconsolata for Powerline.otf"
     dest: "/home/{{ bootstrap_user.name }}/.fonts/Inconsolata for Powerline.otf"
     owner: "{{ bootstrap_user.name }}"
     group: "{{ bootstrap_user.name }}"
