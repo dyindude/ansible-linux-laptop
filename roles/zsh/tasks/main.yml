@@ -1,0 +1,13 @@
+---
+- name: Install zsh packages
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - zsh
+    - zsh-syntax-highlighting
+
+- name: clone zplug
+  git:
+    repo: 'https://github.com/zplug/zplug.git'
+    dest: /home/{{ bootstrap_user.name }}/.zplug

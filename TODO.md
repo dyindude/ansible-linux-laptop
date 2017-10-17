@@ -1,3 +1,7 @@
+- workflow changes
+  - "common" should not have any of its own tasks. define dependencies here on other roles
+  - maybe even define the dependencies in vars/main.yml?
+    - I want one place to look, that makes sense, for the overall configuration
 - bugs??
   - variable precedence with vars/main.yml and the role
   - want to be able to define all important vars in vars/
@@ -11,7 +15,7 @@
 - #role dependencies
   - sorta done, not sure that I'm really getting a huge benefit - tho i do see the benefit in making docker
     container tasks depend on the docker tasks
-- copy rc.lua to VAR USER
+- copy rc.lua to VAR USER (part of dotfiles?)
 - look into messing around with zsh as default shell in linux. it's bearable in Windows
 - roles to add (check galaxy?)
   - #steam (repo + packages) (used galaxy package)
