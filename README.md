@@ -5,7 +5,7 @@ I primarily use it for browsing and coding, the occasional light gaming on steam
 
 To use it for yourself, place necessary vars in vars/main.yml and vars/secret.yml:
 
-###### vars/main.yml<sup>2</sup>
+###### vars/main.yml
 
 ```
 ---
