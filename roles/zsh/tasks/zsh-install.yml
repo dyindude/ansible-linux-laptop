@@ -1,0 +1,8 @@
+---
+- name: Install zsh packages
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - zsh
+    - zsh-syntax-highlighting
