@@ -1,5 +1,0 @@
----
-bootstrap_user:
-  name: 'username'
-  comment: 'user comment'
-  password: 'changeme123456'

@@ -2,5 +2,5 @@
 - name: Clone dotfiles
   git:
     repo: 'https://github.com/dyindude/dotfiles.git'
-    dest: /home/{{ bootstrap_user.name }}/.dotfiles.git
+    dest: /home/{{ user.name }}/.dotfiles.git
     bare: yes

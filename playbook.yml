@@ -2,5 +2,15 @@
 - hosts: all
   vars_files:
      - vars/main.yml
+     - vars/secret.yml
   roles:
-     - main
+    - role: common
+    - role: dotfiles
+    - role: xorg
+    - role: awesome
+    - role: docker
+    - role: chrome
+    - role: obs
+    - role: deb_steam
+    - role: wekan
+    - role: zsh

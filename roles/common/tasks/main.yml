@@ -22,8 +22,8 @@
     - libdrm-intel1
 - name: Ensure my user exists
   user:
-    name: "{{ bootstrap_user.name }}"
-    comment: "{{ bootstrap_user.comment }}"
-    password: "{{ bootstrap_user.password }}"
+    name: "{{ user.name }}"
+    comment: "{{ user.comment }}"
+    password: "{{ user.password }}"
     groups: cdrom,sudo,audio,video,plugdev,netdev
     append: yes

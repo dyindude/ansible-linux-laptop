@@ -10,4 +10,4 @@
 - name: clone zplug
   git:
     repo: 'https://github.com/zplug/zplug.git'
-    dest: /home/{{ bootstrap_user.name }}/.zplug
+    dest: /home/{{ user.name }}/.zplug

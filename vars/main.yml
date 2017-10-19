@@ -1,1 +1,4 @@
-bootstrap_user: dyindude
+user:
+  name: 'varmain'
+  comment: 'test'
+  password: 'changeme'

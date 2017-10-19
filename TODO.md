@@ -1,9 +1,15 @@
 - workflow changes
   - "common" should not have any of its own tasks. define dependencies here on other roles
+    - this is kind of a fallacy, creates a needless role and puts source of truth deep in
+      the project tree. planning to put the role list either in playbook.yml or in vars/main.yml
   - maybe even define the dependencies in vars/main.yml?
     - I want one place to look, that makes sense, for the overall configuration
+  - need to add tags
+    - to that end, need to separate 'config/update' plays from 'provision'
 - bugs??
   - variable precedence with vars/main.yml and the role
+    - vars/main.yml overrides role defaults (this is what we want)
+    - vars/secret.yml overrides vars/main.yml (as long as we include it last)
   - want to be able to define all important vars in vars/
 - build the entire damn thing on
   - gentoo
@@ -12,9 +18,9 @@
   - arch
   - debian
   - freebsd (steam may be a problem here)
+  - this will require testing each role on other distros
 - #role dependencies
-  - sorta done, not sure that I'm really getting a huge benefit - tho i do see the benefit in making docker
-    container tasks depend on the docker tasks
+  - for my current roles, this is a little situational. still need to understand when defining role deps makes sense
 - copy rc.lua to VAR USER (part of dotfiles?)
 - look into messing around with zsh as default shell in linux. it's bearable in Windows
 - roles to add (check galaxy?)
