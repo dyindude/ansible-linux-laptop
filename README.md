@@ -9,18 +9,16 @@ To use it for yourself, place necessary vars in vars/main.yml and vars/secret.ym
 
 ```
 ---
-#vars/main.yml
 #WIP PLZ IGNORE
-repos_to_clone
-docker stuff?
-maybe our enabled roles go here?
+#repos_to_clone
+#docker stuff?
+#maybe our enabled roles go here?
 ```
 
 ###### vars/secret.yml<sup>2</sup>
 
 ```
 ---
-#vars/secret.yml
 user:
   name: 'username'
   comment: 'user comment'
