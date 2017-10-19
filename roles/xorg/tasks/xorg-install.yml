@@ -1,0 +1,13 @@
+---
+- name: Install xorg packages
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - xserver-xorg-core
+    - xserver-xorg-input-evdev
+    - x11-xserver-utils
+    - xinit
+    - xfonts-100dpi
+    - xfonts-75dpi
+    - xfonts-terminus

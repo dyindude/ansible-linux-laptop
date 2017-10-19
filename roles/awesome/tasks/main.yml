@@ -1,14 +1,3 @@
 ---
-- name: Install Klaus Vormweg repo
-  apt_repository:
-    repo: ppa:klaus-vormweg/awesome
-    codename: 'xenial'
-- name: Install awesomewm
-  apt:
-    name: "{{ item }}"
-    update_cache: yes
-  with_items:
-    - libcairo-gobject2
-    - awesome
-    - awesome-extra
-    - rxvt-unicode-256color
+- include_tasks: awesome-install.yml tags=awesome,install,awesome:install
+- include_tasks: awesome-config.yml tags=awesome,config,awesome:config

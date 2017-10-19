@@ -1,0 +1,11 @@
+---
+- name: Ensure .fonts folder exists
+  file:
+    path: "/home/{{ user.name }}/.fonts"
+    state: directory
+- name: Install Inconsolata font
+  copy:
+    src: "files/fonts/Inconsolata for Powerline.otf"
+    dest: "/home/{{ user.name }}/.fonts/Inconsolata for Powerline.otf"
+    owner: "{{ user.name }}"
+    group: "{{ user.name }}"
