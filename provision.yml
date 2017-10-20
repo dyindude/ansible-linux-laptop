@@ -5,6 +5,7 @@
      - vars/secret.yml
   roles:
     - role: common
+    - role: user
     - role: dotfiles
     - role: xorg
     - role: awesome

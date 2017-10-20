@@ -1,4 +1,3 @@
 user:
-  name: 'varmain'
-  comment: 'test'
-  password: 'changeme'
+  paths:
+    data: 'data'

@@ -1,0 +1,13 @@
+---
+- name: Ensure user "{{ user.name }}" exists
+  user:
+    name: "{{ user.name }}"
+    comment: "{{ user.comment }}"
+    password: "{{ user.password }}"
+    groups: cdrom,sudo,audio,video,plugdev,netdev
+    append: yes
+# need to figure out how I want to handle these paths
+#- name: ensure user data folder exists
+#  file:
+#path: /home/{{ user.name }}/{{ user.paths.data }}
+#    state: directory
