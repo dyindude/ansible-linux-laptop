@@ -1,11 +1,3 @@
 ---
-- name: Install OBS ppa
-  apt_repository:
-      repo: ppa:obsproject/obs-studio
-- name: Install OBS
-  apt:
-    name: "{{ item }}"
-    update_cache: yes
-  with_items:
-    - ffmpeg
-    - obs-studio
+- include_tasks: obs-install.yml tags=obs,install,obs:install
+- include_tasks: obs-config.yml tags=obs,config,obs:config
