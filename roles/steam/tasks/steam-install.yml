@@ -1,0 +1,31 @@
+---
+- name: Check if steam is installed
+  command: dpkg-query -W steam
+  register: steam_installed
+  failed_when: steam_installed.rc > 1
+  changed_when: steam_installed.rc == 1
+- name: Enable i386 repos
+  command: dpkg --add-architecture i386
+  when:
+    - steam_installed.rc == 1
+    - ansible_architecture == "x86_64"
+- name: Update apt cache
+  apt:
+    update_cache: yes
+  when:
+    - steam_installed.rc == 1
+    - ansible_architecture == "x86_64"
+- name: Install steam i386 dependencies
+  apt:
+    name: "{{ item }}"
+  with_items:
+    - libgl1-mesa-dri:i386
+    - libgl1-mesa-glx:i386
+    - libc6:i386
+  when:
+    - steam_installed.rc == 1
+    - ansible_architecture == "x86_64"
+- name: Install steam
+  apt:
+    deb: https://steamcdn-a.akamaihd.net/client/installer/steam.deb
+  when: steam_installed.rc == 1

@@ -1,3 +1,6 @@
+- consider breaking out roles into their own repos and publishing them on galaxy
+- dyindude.user role to provide variables for these roles, include a dependency
+- apt/package role to provide handlers for updating package cache, dist-upgrade, etc
 - workflow changes
   - "common" should not have any of its own tasks. define dependencies here on other roles
     - this is kind of a fallacy, creates a needless role and puts source of truth deep in
@@ -7,6 +10,10 @@
   - need to add tags
     - to that end, need to separate 'config/update' plays from 'provision'
 - bugs??
+  - steam wouldn't launch on last install due to this bug:
+    - https://askubuntu.com/questions/771032/steam-not-opening-in-ubuntu-16-04-lts/771507
+    - may need to look out for what edge cases cause this
+  - lost my changes for deb-steam, need to fork/replace the module anyway
   - variable precedence with vars/main.yml and the role
     - vars/main.yml overrides role defaults (this is what we want)
     - vars/secret.yml overrides vars/main.yml (as long as we include it last)

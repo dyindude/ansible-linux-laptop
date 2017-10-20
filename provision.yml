@@ -11,6 +11,6 @@
     - role: docker
     - role: chrome
     - role: obs
-    - role: deb_steam
+    - role: steam
     - role: wekan
     - role: zsh
