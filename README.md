@@ -9,20 +9,24 @@ To use it for yourself, place necessary vars in vars/main.yml and vars/secret.ym
 
 ```
 ---
-#WIP PLZ IGNORE
-#repos_to_clone
-#docker stuff?
-#maybe our enabled roles go here?
+user:
+  name: "{{ secret.user.name }}"
+  comment: "{{ secret.user.comment }}"
+  password: "{{ secret.user.password }}"
+  paths:
+    home: "/home/{{ secret.user.name }}"
+    data: "/home/{{ secret.user.name }}/.data"
 ```
 
 ###### vars/secret.yml<sup>2</sup>
 
 ```
 ---
-user:
-  name: 'username'
-  comment: 'user comment'
-  password: 'changeme'
+secret:
+  user:
+    name: 'username'
+    comment: 'user comment'
+    password: 'changeme'
 ```
 
 
