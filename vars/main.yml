@@ -1,3 +1,7 @@
 user:
+  name: "{{ secret.user.name }}"
+  comment: "{{ secret.user.comment }}"
+  password: "{{ secret.user.password }}"
   paths:
-    data: 'data'
+    home: "/home/{{ secret.user.name }}"
+    data: "/home/{{ secret.user.name }}/.data"

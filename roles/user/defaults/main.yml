@@ -1,2 +1,5 @@
 ---
-# defaults file for user
+user:
+  name: "username"
+  comment: "comment"
+  password: "changeme"

@@ -1,8 +1,8 @@
 ---
 - hosts: all
   vars_files:
-     - vars/main.yml
      - vars/secret.yml
+     - vars/main.yml
   roles:
     - role: common
     - role: user
