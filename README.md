@@ -5,6 +5,17 @@ I primarily use it for browsing and coding, the occasional light gaming on steam
 
 To use it for yourself, place necessary vars in vars/main.yml and vars/secret.yml:
 
+###### vars/secret.yml<sup>2</sup>
+
+```
+---
+secret:
+  user:
+    name: "username"
+    comment: "user comment"
+    password: "changeme"
+```
+
 ###### vars/main.yml
 
 ```
@@ -18,16 +29,6 @@ user:
     data: "/home/{{ secret.user.name }}/.data"
 ```
 
-###### vars/secret.yml<sup>2</sup>
-
-```
----
-secret:
-  user:
-    name: "username"
-    comment: "user comment"
-    password: "changeme"
-```
 
 
 
