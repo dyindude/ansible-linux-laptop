@@ -24,9 +24,9 @@ user:
 ---
 secret:
   user:
-    name: 'username'
-    comment: 'user comment'
-    password: 'changeme'
+    name: "username"
+    comment: "user comment"
+    password: "changeme"
 ```
 
 
