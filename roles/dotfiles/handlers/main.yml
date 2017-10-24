@@ -1,2 +1,7 @@
 ---
-# handlers file for awesome
+- name: disable status.showUntrackedFiles for dotfiles repo
+  become: true
+  become_user: "{{ user.name }}"
+  shell: "/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME config --local status.showUntrackedFiles no"
+  args:
+    chdir: "{{ user.paths.home }}"
