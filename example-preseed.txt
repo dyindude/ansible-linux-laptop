@@ -77,7 +77,7 @@ d-i clock-setup/ntp boolean true
 # If the system has free space you can choose to only partition that space.
 # This is only honoured if partman-auto/method (below) is not set.
 # Alternatives: custom, some_device, some_device_crypto, some_device_lvm.
-#d-i partman-auto/init_automatically_partition select biggest_free
+d-i partman-auto/init_automatically_partition select some_device_lvm
 
 # Alternatively, you may specify a disk to partition. If the system has only
 # one disk the installer will default to using that, but otherwise the device
@@ -104,7 +104,7 @@ d-i partman-lvm/confirm_nooverwrite boolean true
 
 # For LVM partitioning, you can select how much of the volume group to use
 # for logical volumes.
-#d-i partman-auto-lvm/guided_size string max
+d-i partman-auto-lvm/guided_size string max
 #d-i partman-auto-lvm/guided_size string 10GB
 #d-i partman-auto-lvm/guided_size string 50%
 
@@ -218,6 +218,7 @@ d-i apt-setup/backports boolean true
 
 
 ### Package selection
+tasksel tasksel/force-tasks string server
 #tasksel tasksel/first multiselect ubuntu-desktop
 #tasksel tasksel/first multiselect lamp-server, print-server
 #tasksel tasksel/first multiselect kubuntu-desktop
@@ -250,6 +251,9 @@ popularity-contest popularity-contest/participate boolean false
 ### Boot loader installation
 # Grub is the default boot loader (for x86). If you want lilo installed
 # instead, uncomment this:
+d-i debian-installer/quiet boolean false
+d-i debian-installer/splash boolean false
+d-i grub-installer/timeout string 2
 #d-i grub-installer/skip boolean true
 # To also skip installing lilo, and install no bootloader, uncomment this
 # too:
