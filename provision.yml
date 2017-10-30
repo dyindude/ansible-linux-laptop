@@ -13,5 +13,5 @@
     - role: chrome
     - role: obs
     - role: steam
-    - role: wekan
     - role: zsh
+    #- role: wekan #wekan (or any other docker stuff for that matter) won't work in a live system, unless we configure docker to use a dedicated disk on the system
