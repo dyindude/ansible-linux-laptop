@@ -4,14 +4,10 @@
      - vars/secret.yml
      - vars/main.yml
   roles:
-    - role: common
+    - role: drivers
     - role: user
-    - role: dotfiles
     - role: xorg
     - role: awesome
-    - role: docker
     - role: chrome
     - role: obs
-    - role: steam
     - role: zsh
-    #- role: wekan #wekan (or any other docker stuff for that matter) won't work in a live system, unless we configure docker to use a dedicated disk on the system
