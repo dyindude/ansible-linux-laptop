@@ -7,6 +7,7 @@
     - role: drivers
     - role: user
     - role: xorg
+    - role: nvidia
     - role: awesome
     - role: chrome
     - role: obs
