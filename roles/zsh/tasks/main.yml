@@ -1,3 +1,0 @@
----
-- include_tasks: zsh-install.yml tags=zsh,install,zsh:install
-- include_tasks: zsh-config.yml tags=zsh,config,zsh:config

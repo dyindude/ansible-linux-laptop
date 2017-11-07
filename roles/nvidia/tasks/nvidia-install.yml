@@ -1,5 +1,0 @@
----
-- name: "Install nvidia-{{ nvidia_version }} driver"
-  apt:
-    name: "nvidia-{{ nvidia_version }}"
-    state: present

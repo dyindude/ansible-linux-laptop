@@ -1,3 +1,0 @@
----
-- include_tasks: nvidia-install.yml tags=nvidia,install,nvidia:install
-- include_tasks: nvidia-config.yml tags=nvidia,config,nvidia:config

@@ -1,3 +1,0 @@
----
-- include_tasks: obs-install.yml tags=obs,install,obs:install
-- include_tasks: obs-config.yml tags=obs,config,obs:config

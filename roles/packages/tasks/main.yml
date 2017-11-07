@@ -1,0 +1,7 @@
+---
+# tasks file for packages
+- name: install packages we don't need any customization for
+  package:
+    name: "{{ item }}"
+  with_items:
+    - "{{ packages_list }}"

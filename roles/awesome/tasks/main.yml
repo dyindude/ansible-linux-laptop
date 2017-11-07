@@ -1,3 +1,0 @@
----
-- include_tasks: awesome-install.yml tags=awesome,install,awesome:install
-- include_tasks: awesome-config.yml tags=awesome,config,awesome:config
