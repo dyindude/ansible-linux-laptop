@@ -6,11 +6,23 @@
     repo: "{{ dotfiles_repo }}"
     dest: "{{ dotfiles_path }}"
     bare: yes
-- name: "Checkout dotfiles repo for {{ dotfiles_user }}"
+  notify: checkout dotfiles repo in homedir
+- meta: flush_handlers
+- name: "Initialize vim plugins for {{ dotfiles_user }}"
   become: true
-  become_user: "{{ user.name }}"
-  shell: "/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME checkout"
+  become_user: "{{ dotfiles_user }}"
+  shell: "/usr/bin/vim -E -s -c \"source {{ dotfiles_home }}/.vimrc\" -c PlugInstall -c qall"
   args:
     chdir: "{{ dotfiles_home }}"
-    creates: "{{ dotfiles_home }}/.zshrc"
-  notify: disable status.showUntrackedFiles for dotfiles repo
+    creates: "{{ dotfiles_home }}/{{ dotfiles_viminit_path }}"
+  register: viminit
+  failed_when: viminit.rc >= 2
+  when: dotfiles_viminit == true
+- name: "Generate .prompt.zsh for {{ dotfiles_user }}"
+  become: true
+  become_user: "{{ dotfiles_user }}"
+  shell: "/usr/bin/vim \"+PromptlineSnapshot! ~/.prompt.zsh airline\" +qall"
+  args:
+    chdir: "{{ dotfiles_home }}"
+    creates: "{{ dotfiles_home }}/.prompt.zsh"
+  when: dotfiles_viminit == true

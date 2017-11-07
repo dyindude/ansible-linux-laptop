@@ -1,4 +1,11 @@
 ---
+- name: checkout dotfiles repo in homedir
+  become: true
+  become_user: "{{ dotfiles_user }}"
+  shell: "/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME checkout"
+  args:
+    chdir: "{{ dotfiles_home }}"
+  notify: disable status.showUntrackedFiles for dotfiles repo
 - name: disable status.showUntrackedFiles for dotfiles repo
   become: true
   become_user: "{{ dotfiles_user }}"
