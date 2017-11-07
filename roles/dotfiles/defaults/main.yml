@@ -1,2 +1,5 @@
 ---
-# defaults file for awesome
+dotfiles_user: "ansible_user"
+dotfiles_home: "/home/{{ dotfiles_user }}"
+dotfiles_repo: "https://github.com/dyindude/dotfiles.git"
+dotfiles_path: "{{ dotfiles_home }}/.dotfiles.git"

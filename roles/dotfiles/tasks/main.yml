@@ -1,16 +1,16 @@
 ---
-- name: Clone dotfiles for "{{ user.name }}"
+- name: "Clone dotfiles for {{ dotfiles_user }}"
   become: true
-  become_user: "{{ user.name }}"
+  become_user: "{{ dotfiles_user }}"
   git:
-    repo: 'https://github.com/dyindude/dotfiles.git'
-    dest: "{{ user.paths.home }}/.dotfiles.git"
+    repo: "{{ dotfiles_repo }}"
+    dest: "{{ dotfiles_path }}"
     bare: yes
-- name: Checkout dotfiles repo for "{{ user.name }}"
+- name: "Checkout dotfiles repo for {{ dotfiles_user }}"
   become: true
   become_user: "{{ user.name }}"
   shell: "/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME checkout"
   args:
-    chdir: "{{ user.paths.home }}"
-    creates: "{{ user.paths.home }}/.zshrc"
+    chdir: "{{ dotfiles_home }}"
+    creates: "{{ dotfiles_home }}/.zshrc"
   notify: disable status.showUntrackedFiles for dotfiles repo

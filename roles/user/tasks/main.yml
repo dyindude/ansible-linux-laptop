@@ -1,5 +1,5 @@
 ---
-- name: Ensure user "{{ user.name }}" exists
+- name: "Ensure user {{ user.name }} exists"
   user:
     name: "{{ user.name }}"
     comment: "{{ user.comment }}"

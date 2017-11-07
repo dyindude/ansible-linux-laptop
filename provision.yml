@@ -4,11 +4,5 @@
      - vars/secret.yml
      - vars/main.yml
   roles:
-    - role: drivers
     - role: user
-    - role: xorg
-    - role: nvidia
-    - role: awesome
-    - role: chrome
-    - role: obs
-    - role: zsh
+    - role: dotfiles

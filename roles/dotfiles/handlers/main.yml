@@ -1,7 +1,7 @@
 ---
 - name: disable status.showUntrackedFiles for dotfiles repo
   become: true
-  become_user: "{{ user.name }}"
+  become_user: "{{ dotfiles_user }}"
   shell: "/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME config --local status.showUntrackedFiles no"
   args:
-    chdir: "{{ user.paths.home }}"
+    chdir: "{{ dotfiles_home }}"

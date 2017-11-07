@@ -5,4 +5,5 @@ user:
   paths:
     home: "/home/{{ secret.user.name }}"
     data: "/home/{{ secret.user.name }}/.data"
-nvidia_version: 384
+
+dotfiles_user: "{{ user.name }}"
