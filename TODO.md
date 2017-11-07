@@ -1,3 +1,7 @@
+- need to figure out data backup/restore workflow
+  - containers
+  - homedir data (specific path? mostly for notes, etc)
+  - mountpoint that doesn't persist by default (e.g. ~/Downloads)
 - consider breaking out roles into their own repos and publishing them on galaxy
 - dyindude.user role to provide variables for these roles, include a dependency
 - apt/package role to provide handlers for updating package cache, dist-upgrade, etc

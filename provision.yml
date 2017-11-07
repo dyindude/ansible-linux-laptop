@@ -6,3 +6,13 @@
   roles:
     - role: user
     - role: dotfiles
+    - role: docker
+    - role: wekan
+#    - role: drivers
+#    - role: user
+#    - role: xorg
+#    - role: nvidia
+#    - role: awesome
+#    - role: chrome
+#    - role: obs
+#    - role: zsh

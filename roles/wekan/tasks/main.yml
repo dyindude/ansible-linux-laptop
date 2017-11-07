@@ -9,7 +9,7 @@
 - name: wekan mongodb container
   docker_container:
     name: wekandb
-    image: mongo:3.2.12
+    image: "mongo:{{ wekan_mongo_tag }}"
     state: started
     volumes_from:
     - wekandata
@@ -17,12 +17,12 @@
 - name: wekan container
   docker_container:
     name: wekan
-    image: wekanteam/wekan:meteor-1.4
+    image: "wekanteam/wekan:{{ wekan_tag }}"
     state: started
     links:
     - wekandb
     ports:
-    - 8081:80
+    - "{{ wekan_port }}:80"
     env:
         MONGO_URL: mongodb://wekandb/wekan
-        ROOT_URL: http://wekan:8081
+        ROOT_URL: "{{ wekan_root_url }}"

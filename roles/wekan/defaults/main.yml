@@ -1,2 +1,6 @@
 ---
-# defaults file for awesome
+wekan_mongo_tag: "3.2.12"
+wekan_tag: "meteor-1.4"
+wekan_port: "8081"
+wekan_hostname: "wekan"
+wekan_root_url: "http://{{ wekan_hostname }}:{{ wekan_port }}"
