@@ -3,7 +3,12 @@
   apt_key:
     url: https://dl-ssl.google.com/linux/linux_signing_key.pub
     id: 4CCA1EAF950CEE4AB83976DCA040830F7FAC5991
+- name: check if chrome is already installed
+  command: dpkg-query -W google-chrome-stable
+  register: chrome_installed
+  failed_when: chrome_installed.rc > 1
+  changed_when: chrome_installed.rc == 1
 - name: Install google-chrome-stable
   apt:
     deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  creates: /etc/apt/sources.list.d/google-chrome.list
+  when: chrome_installed.rc == 1
