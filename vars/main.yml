@@ -22,3 +22,4 @@ packages_list:
   - nvidia-384
   - qiv
   - mupdf
+  - git

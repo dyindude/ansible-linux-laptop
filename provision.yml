@@ -4,15 +4,11 @@
      - vars/secret.yml
      - vars/main.yml
   roles:
+    - role: vbox-guest
     - role: user
     - role: dotfiles
-    - role: docker
-    - role: wekan
-#    - role: drivers
-#    - role: user
-#    - role: xorg
-#    - role: nvidia
-#    - role: awesome
-#    - role: chrome
-#    - role: obs
-#    - role: zsh
+    - role: xorg
+    - role: ppas
+    - role: packages
+    - role: chrome
+      #- role: nvidia

@@ -11,12 +11,3 @@
   with_items:
     - virtualbox-guest-dkms
     - virtualbox-guest-x11
-- name: Install drivers for T450s when not running in Vagrant
-  apt:
-    name: "{{ item }}"
-    update_cache: yes
-  when: ran_from_vagrant != "true"
-  with_items:
-    - xserver-xorg-video-intel
-    - xserver-xorg-input-synaptics
-    - libdrm-intel1

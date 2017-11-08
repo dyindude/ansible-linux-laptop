@@ -3,10 +3,7 @@
   apt_key:
     url: https://dl-ssl.google.com/linux/linux_signing_key.pub
     id: 4CCA1EAF950CEE4AB83976DCA040830F7FAC5991
-- name: Install chrome repo
-  apt_repository:
-      repo: deb [arch={{ (ansible_architecture == "x86_64") | ternary('amd64', ansible_architecture) }}] http://dl.google.com/linux/chrome/deb/ stable main
 - name: Install google-chrome-stable
   apt:
-    name: google-chrome-stable
-    update_cache: yes
+    deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  creates: /etc/apt/sources.list.d/google-chrome.list

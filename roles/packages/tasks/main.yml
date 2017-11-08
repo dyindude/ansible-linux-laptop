@@ -1,5 +1,9 @@
 ---
 # tasks file for packages
+- name: update system
+  apt:
+    update_cache: yes
+    upgrade: dist
 - name: install packages we don't need any customization for
   package:
     name: "{{ item }}"
