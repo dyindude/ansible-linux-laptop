@@ -1,14 +1,10 @@
 ---
 - hosts: all
   vars_files:
-     - vars/secret.yml
      - vars/main.yml
   roles:
-    - role: vbox-guest
-    - role: user
-    - role: dotfiles
-    - role: xorg
     - role: ppas
     - role: packages
-    - role: chrome
-      #- role: nvidia
+    #    - role: dotfiles
+    #- role: xorg
+    #- role: chrome

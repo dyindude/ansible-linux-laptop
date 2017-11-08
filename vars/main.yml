@@ -1,10 +1,6 @@
 user:
-  name: "{{ secret.user.name }}"
-  comment: "{{ secret.user.comment }}"
-  password: "{{ secret.user.password }}"
-  paths:
-    home: "/home/{{ secret.user.name }}"
-    data: "/home/{{ secret.user.name }}/.data"
+  name: "dyindude"
+  comment: "dyindude"
 
 dotfiles_user: "{{ user.name }}"
 ppas_list:
@@ -23,3 +19,6 @@ packages_list:
   - qiv
   - mupdf
   - git
+  - alsa-base
+  - alsa-utils
+  - parcellite
