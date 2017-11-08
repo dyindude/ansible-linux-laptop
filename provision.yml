@@ -5,6 +5,7 @@
   roles:
     - role: ppas
     - role: packages
+    - role: discord
     #    - role: dotfiles
     #- role: xorg
     #- role: chrome

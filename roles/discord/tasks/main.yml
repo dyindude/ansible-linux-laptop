@@ -1,0 +1,3 @@
+---
+- include_tasks: discord-install.yml tags=discord,install,discord:install
+- include_tasks: discord-config.yml tags=discord,config,discord:config
