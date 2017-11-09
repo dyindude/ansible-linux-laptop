@@ -1,9 +1,15 @@
+- OBS plugins/config? where to store it?
+  - looks like everything is stored in .config/obs-studio, need to scrape it for secrets
+- awesome config? need a way to resize some windows, layout for streaming
+  - look at awesomewm themes
+  - come back to this later..
+
 - need to figure out data backup/restore workflow
   - containers
   - homedir data (specific path? mostly for notes, etc)
   - mountpoint that doesn't persist by default (e.g. ~/Downloads)
 - consider breaking out roles into their own repos and publishing them on galaxy
-- dyindude.user role to provide variables for these roles, include a dependency
+[????] - dyindude.user role to provide variables for these roles, include a dependency
 - workflow changes
 - bugs??
   - steam wouldn't launch on last install due to this bug:

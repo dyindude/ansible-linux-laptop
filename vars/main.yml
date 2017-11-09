@@ -22,3 +22,5 @@ packages_list:
   - alsa-base
   - alsa-utils
   - parcellite
+  - scrot
+  - mplayer
