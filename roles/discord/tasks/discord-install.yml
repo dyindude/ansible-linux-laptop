@@ -6,5 +6,5 @@
   changed_when: discord_installed.rc == 1
 - name: Install discord
   apt:
-    deb: https://dl.discordapp.net/apps/linux/0.0.2/discord-0.0.2.deb
-  when: discord_installed.rc == 1
+    deb: "{{ discord_package_url }}"
+    when: discord_installed.rc == 1
