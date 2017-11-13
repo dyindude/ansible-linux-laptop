@@ -1,9 +1,7 @@
 ---
-- name: "Ensure user {{ user.name }} exists"
+- name: "Ensure user {{ user.name }} is in correct groups"
   user:
     name: "{{ user.name }}"
-    comment: "{{ user.comment }}"
-    password: "{{ user.password }}"
     groups: cdrom,sudo,audio,video,plugdev,netdev
     append: yes
 # need to figure out how I want to handle these paths
