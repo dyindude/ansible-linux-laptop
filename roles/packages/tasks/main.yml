@@ -6,6 +6,15 @@
     upgrade: dist
 - name: install packages we don't need any customization for
   package:
-    name: "{{ item }}"
-  with_items:
-    - "{{ packages_list }}"
+    name: "{{ ','.join(packages_list) }}"
+    state: present
+  async: 1000
+  poll: 0
+  register: packages_sleep
+- name: check on package install progress
+  async_status:
+    jid: "{{ packages_sleep.ansible_job_id }}"
+  register: packages_result
+  until: packages_result.finished
+  retries: "{{ packages_list | length }}"
+  delay: 60
