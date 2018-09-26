@@ -7,4 +7,4 @@
 - name: Install discord
   apt:
     deb: "{{ discord_package_url }}"
-    when: discord_installed.rc == 1
+  when: discord_installed.rc == 1
