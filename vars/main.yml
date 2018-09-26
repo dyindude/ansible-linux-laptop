@@ -3,19 +3,14 @@ user:
   comment: "dyindude"
 
 dotfiles_user: "{{ user.name }}"
-ppas_list:
-  - ppa:klaus-vormweg/awesome
-  - ppa:obsproject/obs-studio
 packages_list:
   - libcairo-gobject2
   - awesome
   - awesome-extra
   - rxvt-unicode-256color
   - ffmpeg
-  - obs-studio
   - zsh
   - zsh-syntax-highlighting
-  - nvidia-384
   - qiv
   - mupdf
   - git
