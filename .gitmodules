@@ -1,0 +1,3 @@
+[submodule "roles/discord"]
+	path = roles/discord
+	url = https://github.com/dyindude/ansible-role-discord.git
