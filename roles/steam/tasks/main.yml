@@ -1,3 +1,0 @@
----
-- include_tasks: steam-install.yml tags=steam,install,steam:install
-- include_tasks: steam-config.yml tags=steam,config,steam:config

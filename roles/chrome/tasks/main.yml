@@ -1,3 +1,0 @@
----
-- include_tasks: chrome-install.yml tags=chrome,install,chrome:install
-- include_tasks: chrome-config.yml tags=chrome,config,chrome:config
