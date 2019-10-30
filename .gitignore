@@ -1,5 +1,5 @@
 provision.retry
-ubuntu-xenial-16.04-cloudimg-console.log
+ubuntu-*.log
 .vagrant
 .vagrant/*
 vars/secret.yml
