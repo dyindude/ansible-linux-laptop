@@ -1,7 +1,0 @@
----
-# tasks file for ppas
-- name: install our desired ppa repos
-  apt_repository:
-    repo: "{{ item }}"
-  with_items:
-    - "{{ ppas_list }}"
